@@ -20,10 +20,10 @@ Funcionalidades principais:
 O aplicativo fornece um menu intuitivo para o usuário interagir com essas funcionalidades. Ele utiliza a linguagem de programação Python e o conector POSTGRESQL para estabelecer a conexão com o banco de dados e executar as operações de manipulação de dados.
 
 ## EXECUTANDO O PROJETO:
-### 1. Importando o Banco de Dados:
-   - Antes de executar o aplicativo, importe o arquivo `DATABASE.sql` fornecido. 
+### 1. IMPORTAÇÃO DO BANCO DE DADOS:
+   - Antes de executar o aplicativo, importe o arquivo `DATABASE.sql` fornecido para o seu banco de dados PostgreSQL. 
 
-### 2. Configurando a Conexão com o PostgreSQL:
+### 2. CONFIGURANDO A CONEXÃO COM O POSTGRESQL:
    - Abra o arquivo `CODIGO.py` e localize a seção onde a conexão com o banco de dados é configurada. Você precisará inserir suas credenciais de conexão neste trecho de código:
    ```python
    host='localhost',
@@ -32,14 +32,21 @@ O aplicativo fornece um menu intuitivo para o usuário interagir com essas funci
    password='sua_senha'
    ```
 
-### 3. Instalando Pacotes Python:
-   - Certifique-se de ter o pacote `psycopg2` instalado. Caso contrário, você pode instalá-lo com o comando:
+### 3. INTALANDO AS DEPEDÊNCIAS:
+   - Entre no diretório `CODIGO` e execute o comando:
+
    ```bash
-   pip install psycopg2
+   pip install -r requirements.txt
    ```
 
-### 4. Executando o Aplicativo:
-   - Após configurar o banco de dados e as credenciais de conexão, execute o script `CODIGO.py`. Isso iniciará o aplicativo Python que permite adicionar, listar, atualizar e excluir usuários do banco de dados `cadastro`.
+### 4. EXECUTANDO O APLICATIVO:
+   - Para executar o arquivo Python, utilize o comando abaixo no terminal, dentro do diretório `./CODIGO`:
+
+   ```
+   python CODIGO.py
+   ```
+
+   - Isso iniciará o aplicativo Python que permite adicionar, listar, atualizar e excluir usuários do banco de dados `cadastro`.
 
 ## NÃO SABE?
 - Entendemos que para manipular arquivos em muitas linguagens, é necessário possuir conhecimento nessas áreas. Para auxiliar nesse aprendizado, oferecemos cursos gratuitos disponíveis:
