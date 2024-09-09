@@ -24,12 +24,12 @@ O aplicativo fornece um menu intuitivo para o usuário interagir com essas funci
    - Antes de executar o aplicativo, importe o arquivo `DATABASE.sql` fornecido para o seu banco de dados PostgreSQL. 
 
 ### 2. CONFIGURANDO A CONEXÃO COM O POSTGRESQL:
-   - Abra o arquivo `CODIGO.py` e localize a seção onde a conexão com o banco de dados é configurada. Você precisará inserir suas credenciais de conexão neste trecho de código:
-   ```python
-   host='localhost',
-   database='cadastro',
-   user='seu_usuario',
-   password='sua_senha'
+   - Certifique-se de substituir `localhost`, `seu_usuario`, e `sua_senha` pelos valores corretos no arquivo `./CODIGO/.env`. O arquivo `.env` deve conter as seguintes variáveis de ambiente:
+   ```env
+   DB_HOST=localhost
+   DB_NAME=cadastro
+   DB_USER=seu_usuario
+   DB_PASSWORD=sua_senha
    ```
 
 ### 3. INTALANDO AS DEPEDÊNCIAS:

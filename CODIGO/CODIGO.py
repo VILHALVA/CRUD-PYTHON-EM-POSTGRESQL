@@ -1,6 +1,10 @@
 import psycopg2
 from psycopg2 import Error
 from time import sleep
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 class Usuario:
     def __init__(self, nome, idade):
@@ -11,10 +15,10 @@ class GerenciadorUsuarios:
     def __init__(self):
         try:
             self.conexao = psycopg2.connect(
-                host='localhost',
-                database='cadastro',
-                user='seu_usuario',
-                password='sua_senha'
+                host=os.getenv('DB_HOST'),
+                database=os.getenv('DB_NAME'),
+                user=os.getenv('DB_USER'),
+                password=os.getenv('DB_PASSWORD')
             )
             if self.conexao:
                 self.cursor = self.conexao.cursor()
